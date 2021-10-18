@@ -14,7 +14,7 @@
     echo $cpf;
     echo $senha1;
     echo $senha2;
-    echo "oi";
+    
     if (valida_nome($nome) && valida_nome($sobrenome) &&
         validaCPF($cpf) && validaSenhas($senha1,$senha2)){
             $sql = "INSERT INTO `usuario` (`nome`, `sobrenome`, `cpf`, `senha`)
@@ -22,7 +22,13 @@
             
             $result = mysqli_query($conn,$sql) or die (mysqli_error($conn));
             
-            if (!$result)
+            if (!$result){
+                die('Erro: '.mysqli_error($conn));
+            }else{
+                echo "<script> 
+                        alert('Cadastro realizado com sucesso!');
+                    </script>";
+            }
             
     }else if (!valida_nome($nome)){
         echo "<script> 

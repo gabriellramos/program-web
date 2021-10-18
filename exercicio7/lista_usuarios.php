@@ -6,9 +6,9 @@
     $result = mysqli_query($conn,$sql) or die (mysqli_error($conn));
 
     if ($result->num_rows > 0){
-        echo "";
+        
         while ($row = $result->fetch_assoc()){
-            echo "Nome > ".$row["nome"]."    Email: ".$row["email"]."<br><br>";
+            echo "Nome > ".$row["nome"]."    Sobrenome: ".$row["sobrenome"]."<br><br>";
 
         }
 
