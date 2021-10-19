@@ -16,10 +16,14 @@
     
     <h1 class="h3 mb-3 fw-normal">Escreva algo para salvar em um arquivo</h1>
 
+    <div class="form-floating">
+      <input type="text" class="form-control" name="filename" id="filename" placeholder="Nome do arquivo" required>
+      <label for="floatingInput">Nome_do_Arquivo.txt</label>
+    </div>
     
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Digite seu texto aqui</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="textarea1" id="textarea1" rows="3" required></textarea>
     </div>
 
     <div class="checkbox mb-3">
