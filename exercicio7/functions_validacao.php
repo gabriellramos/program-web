@@ -51,7 +51,7 @@ function verificaValoresSenha($str){
     $r = str_split($str);
 
     $result = array_unique($r);
-    echo "--------".strlen($str)." ------ ".count($result)."------";
+  //  echo "--------".strlen($str)." ------ ".count($result)."------";
     if (strlen($str) == count($result))
         return true;
 
@@ -63,7 +63,7 @@ function validaSenhas($str1, $str2){
 
     if ($str1 === $str2)
         if (verificaValoresSenha($str1) && strlen(($str1) >= 6)){
-            echo "função senha ok";
+            //echo "função senha ok";
             return true;
         }
 

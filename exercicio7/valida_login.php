@@ -1,9 +1,9 @@
 <?php
   include "connection.php";
   
-  $email = $_POST["email"];
-  $senha = $_POST["senha"];
-  $sql = "SELECT * FROM usuario WHERE email='".$email."' and senha='".$senha."'";
+  $cpf = $_POST["cpf"];
+  $senha = sha1($_POST["senha"]);
+  $sql = "SELECT * FROM usuario WHERE cpf='".$cpf."' and senha='".$senha."'";
   $result = mysqli_query($conn,$sql) or die (mysqli_error($conn));
 
   if ($result->num_rows > 0){
@@ -11,9 +11,16 @@
           echo "<script> 
                   alert('Login efetuado com sucesso!');
                 </script>";
-
+          header("Location: lista_usuarios.php");
       }
-  }else echo "alert('Falha ao efetuar login!)";
+  }else {
+    echo "<script> 
+                alert('Falha ao efetuar login!');
+              </script>";
+    header("Location: index.php");
+  }
+
+  
 
 
 ?>

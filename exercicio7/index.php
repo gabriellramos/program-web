@@ -18,8 +18,8 @@
     <h1 class="h3 mb-3 fw-normal">Faça Login</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" required>
-      <label for="floatingInput">Email</label>
+      <input type="number" class="form-control" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
+      <label for="floatingInput">CPF</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Password" required>

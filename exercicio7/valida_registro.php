@@ -28,26 +28,33 @@
                 echo "<script> 
                         alert('Cadastro realizado com sucesso!');
                     </script>";
+
+                header("Location: lista_usuarios.php");
             }
             
     }else if (!valida_nome($nome)){
         echo "<script> 
                 alert('Erro no campo nome!');
             </script>";
+            header("Location: registro.php");
     }else if (!valida_nome($sobrenome)){
         echo "<script> 
                 alert('Erro no campo sobrenome!');
             </script>";
+            header("Location: registro.php");
     }else if (!validaCPF($cpf)){
         echo "<script> 
                 alert('Erro no campo CPF!');
             </script>";
+            header("Location: registro.php");
     }else if (!validaSenhas($senha1,$senha2)){
         echo "<script> 
                 alert('Senhas não conferem!');
             </script>";
+            header("Location: registro.php");
     }
 
     
+       
     
 ?>
