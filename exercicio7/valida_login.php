@@ -10,15 +10,15 @@
       while ($row = $result->fetch_assoc()){
           echo "<script> 
                   alert('Login efetuado com sucesso!');
+                  window.location='lista_usuarios.php';
                 </script>";
-          header("Location: lista_usuarios.php");
       }
-  }else {
+  }else 
     echo "<script> 
-                alert('Falha ao efetuar login!');
-              </script>";
-    header("Location: index.php");
-  }
+            alert('Falha ao efetuar login!');
+            window.location='index.php';
+          </script>";
+  
 
   
 

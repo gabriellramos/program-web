@@ -35,26 +35,29 @@
     }else if (!valida_nome($nome)){
         echo "<script> 
                 alert('Erro no campo nome!');
+                window.location='lista_usuarios.php';
             </script>";
-            header("Location: registro.php");
+            
     }else if (!valida_nome($sobrenome)){
         echo "<script> 
                 alert('Erro no campo sobrenome!');
+                
+                window.location='registro.php';
             </script>";
-            header("Location: registro.php");
     }else if (!validaCPF($cpf)){
         echo "<script> 
                 alert('Erro no campo CPF!');
+                
+                window.location='registro.php';
             </script>";
-            header("Location: registro.php");
+            
     }else if (!validaSenhas($senha1,$senha2)){
         echo "<script> 
                 alert('Senhas não conferem!');
+                
+                window.location='registro.php';
             </script>";
-            header("Location: registro.php");
+            
     }
-
-    
-       
     
 ?>
