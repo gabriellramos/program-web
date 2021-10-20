@@ -12,7 +12,7 @@
     <title>Arquivos php</title>
   </head>
   <body>
-  <form name="login" method="POST" action="valida_login.php">
+  <form name="login" method="POST" action="valida_arquivo.php">
     
     <h1 class="h3 mb-3 fw-normal">Escreva algo para salvar em um arquivo</h1>
 
